@@ -2240,6 +2240,7 @@ int main(int argc, char **argv) {
   SSL_CTX_set_options(ssl_ctx, ssl_opts);
   SSL_CTX_set_mode(ssl_ctx, SSL_MODE_AUTO_RETRY);
   SSL_CTX_set_mode(ssl_ctx, SSL_MODE_RELEASE_BUFFERS);
+  SSL_CTX_set_max_version(ssl_ctx, TLS1_3_VERSION);
 
   const char *ciphers;
   if (config.ciphers.empty()) {
